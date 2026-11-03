@@ -8,9 +8,16 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="lang-en"> <!-- За замовчуванням англійська -->
+<body class="lang-en">
 
     <div class="container">
+        <!-- Кнопка перемикача мови ззовні зверху справа -->
+        <div class="top-action-bar">
+            <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">
+                <span class="lang-en-text" style="opacity: 1;">EN</span> / <span class="lang-ua-text" style="opacity: 0.5;">UA</span>
+            </button>
+        </div>
+
         <!-- Header / Hero Section -->
         <header>
             <div class="header-profile">
@@ -24,11 +31,7 @@
             </div>
 
             <div class="header-contacts">
-                <div class="contact-row">
-                    <span>📧 Email: <a href="mailto:artem.dan.m@gmail.com">artem.dan.m@gmail.com</a></span>
-                    <!-- Кнопка перемикача мови та теми -->
-                    <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">UA / EN</button>
-                </div>
+                <div>📧 Email: <a href="mailto:artem.dan.m@gmail.com">artem.dan.m@gmail.com</a></div>
                 <div>📱 Phone / Telegram: <a href="tel:+380636030993">+380 63 603 09 93</a></div>
                 <div>✈️ Telegram: <a href="https://t.me/nuquma" target="_blank">@nuquma</a></div>
                 <div>🌐 GitHub: <a href="https://github.com/sntartem" target="_blank">sntartem.github.io</a></div>
@@ -97,7 +100,6 @@
         </div>
     </div>
 
-    <!-- Підключаємо скрипт перемикання -->
     <script src="script.js"></script>
 </body>
 </html>
