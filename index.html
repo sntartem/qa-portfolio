@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artem Danylovskyi — Junior QA Engineer</title>
+    <title>Artem Danylovskyi — QA Engineer & Vibe Coding Designer</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,20 +11,20 @@
 <body class="lang-en">
 
     <div class="container">
+        <!-- Кнопка перемикача мови у правому верхньому кутку -->
+        <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">
+            <span class="lang-en-text">EN</span> / <span class="lang-ua-text">UA</span>
+        </button>
+
         <!-- Header / Hero Section -->
         <header>
-            <!-- Абсолютна кнопка перемикача мови в правому верхньому кутку шапки -->
-            <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">
-                <span class="lang-en-text">EN</span> / <span class="lang-ua-text">UA</span>
-            </button>
-
             <div class="header-profile">
                 <div style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--accent-blue); overflow: hidden; flex-shrink: 0; box-shadow: 0 0 15px var(--accent-glow);">
                     <img src="avatar.jpg" alt="Artem Danylovskyi" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 </div>
                 <div class="hero-title">
                     <h1>Artem Danylovskyi</h1>
-                    <div class="subtitle" data-en="Junior Software QA Engineer" data-ua="Молодший спеціаліст із забезпечення якості (QA)">Junior Software QA Engineer</div>
+                    <div class="subtitle" data-en="Junior QA Engineer & Vibe Coding Designer" data-ua="Молодший QA Engineer та Vibe Coding Дизайнер">Junior QA Engineer & Vibe Coding Designer</div>
                 </div>
             </div>
 
@@ -39,9 +39,9 @@
         <!-- PROFESSIONAL SUMMARY -->
         <section class="card">
             <h2 data-en="Professional Summary" data-ua="Професійний профіль">Professional Summary</h2>
-            <p data-en="Detail-oriented Junior QA Engineer with a solid understanding of software testing concepts, SDLC, and web application architecture. Equipped with strong analytical skills, hands-on experience inspecting web layouts (HTML/CSS), and leveraging AI tools to write clear test documentation. Passionate about quality assurance, finding edge-case bugs, and delivering reliable cloud platform solutions."
-               data-ua="Уважний до деталей Junior QA Engineer із міцним розумінням концепцій тестування ПО, життєвого циклу розробки (SDLC) та архітектури вебдодатків. Має сильні аналітичні навички, практичний досвід перевірки вебверстки (HTML/CSS) та використання AI-інструментів для створення чіткої тестової документації. Захоплений забезпеченням якості, пошуком незвичних багів та створенням надійних рішень.">
-               Detail-oriented Junior QA Engineer with a solid understanding of software testing concepts, SDLC, and web application architecture. Equipped with strong analytical skills, hands-on experience inspecting web layouts (HTML/CSS), and leveraging AI tools to write clear test documentation. Passionate about quality assurance, finding edge-case bugs, and delivering reliable cloud platform solutions.
+            <p data-en="Detail-oriented Junior QA Engineer and creative UI/UX & Vibe Coding Designer with hands-on experience in software testing, web layout inspection (HTML/CSS), motion design, and PR promotion. Skilled at leveraging AI tools (ChatGPT, Claude, Cursor) for rapid prototyping and test documentation. Passionate about quality assurance, finding edge-case bugs, and bridging the gap between technical testing and creative development."
+               data-ua="Уважний до деталей Junior QA Engineer та креативний UI/UX & Vibe Coding Дизайнер із практичним досвідом у тестуванні ПЗ, перевірці вебверстки (HTML/CSS), моушн-дизайні та PR-просуванні. Впевнено використовує AI-інструменти (ChatGPT, Claude, Cursor) для швидкого прототипування та створення тестової документації. Захоплений забезпеченням якості, пошуком нестандартних багів та поєднанням технічного тестування з креативною розробкою.">
+               Detail-oriented Junior QA Engineer and creative UI/UX & Vibe Coding Designer with hands-on experience in software testing, web layout inspection (HTML/CSS), motion design, and PR promotion. Skilled at leveraging AI tools (ChatGPT, Claude, Cursor) for rapid prototyping and test documentation. Passionate about quality assurance, finding edge-case bugs, and bridging the gap between technical testing and creative development.
             </p>
         </section>
 
@@ -51,45 +51,75 @@
             
             <div class="experience-item">
                 <div class="exp-header">
-                    <h3 data-en="Game & Web QA Tester / Server Administrator" data-ua="Game & Web QA Tester / Адміністратор сервера">Game & Web QA Tester / Server Administrator</h3>
+                    <h3 data-en="QA Tester & PR / Motion Designer" data-ua="QA Тестувальник та PR / Motion Дизайнер">QA Tester & PR / Motion Designer</h3>
                     <span class="exp-date">2021 – Present</span>
                 </div>
                 <div class="exp-company" data-en="GTA V RolePlay Projects (Quant RP & 3 other servers)" data-ua="GTA V RolePlay Проєкти (Quant RP та 3 інші сервери)">GTA V RolePlay Projects (Quant RP & 3 other servers)</div>
                 <ul>
                     <li data-en="Performed functional, exploratory, smoke, and regression testing on game mechanics, web interfaces, and server updates across 4 GTA V RP projects."
-                        data-ua="Виконував функціональне, дослідницьке (exploratory), смок- та регресійне тестування ігрових механік, веб-інтерфейсів та оновлень на 4 проєктах GTA V RP.">
+                        data-ua="Виконував функціональне, дослідницьке, смок- та регресійне тестування ігрових механік, веб-інтерфейсів та оновлень на 4 проєктах GTA V RP.">
                         Performed functional, exploratory, smoke, and regression testing on game mechanics, web interfaces, and server updates across 4 GTA V RP projects.</li>
                     <li data-en="Logged detailed bug reports (reproduction steps, expected vs. actual behavior, screenshots/videos) and tracked resolution alongside development teams."
                         data-ua="Створював детальні репорти про баги (кроки відтворення, очікувана та реальна поведінка, скріншоти/відео) та супроводжував їх вирішення разом із розробниками.">
                         Logged detailed bug reports (reproduction steps, expected vs. actual behavior, screenshots/videos) and tracked resolution alongside development teams.</li>
-                    <li data-en="Tested complex client-server interactions, edge-case user scenarios, and economy/system stability before major update rollouts."
-                        data-ua="Тестував складні клієнт-серверні взаємодії, нестандартні сценарії користувачів та стабільність економіки/систем перед випуском великих оновлень.">
-                        Tested complex client-server interactions, edge-case user scenarios, and economy/system stability before major update rollouts.</li>
+                    <li data-en="Developed visual content, promotional assets, and motion graphics using Photoshop, Premiere Pro, and After Effects for brand marketing campaigns."
+                        data-ua="Розробляв візуальний контент, промо-матеріали та анімації у Photoshop, Premiere Pro та After Effects для маркетингових кампаній бренда.">
+                        Developed visual content, promotional assets, and motion graphics using Photoshop, Premiere Pro, and After Effects for brand marketing campaigns.</li>
+                    <li data-en="Leveraged AI visual and text generators to speed up creative iteration, draft concepts, and streamline QA/design workflows."
+                        data-ua="Використовував AI-генератори для прискорення креативних ітерацій, створення концептів та оптимізації QA та дизайну.">
+                        Leveraged AI visual and text generators to speed up creative iteration, draft concepts, and streamline QA/design workflows.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- SKILLS -->
+        <!-- EDUCATION -->
+        <section class="card">
+            <h2 data-en="Education" data-ua="Освіта">Education</h2>
+            
+            <div class="experience-item" style="margin-bottom: 20px;">
+                <div class="exp-header">
+                    <h3 data-en="Higher Education: Personnel Management & Business Management" data-ua="Вища освіта: Управління персоналом та бізнес-менеджмент">Higher Education: Personnel Management & Business Management</h3>
+                    <span class="exp-date">2022 – 2026</span>
+                </div>
+                <div class="exp-company" data-en="MAUP (Interregional Academy of Personnel Management)" data-ua="МАУП (Міжрегіональна Академія Управління Персоналом)">MAUP (Interregional Academy of Personnel Management)</div>
+                <p data-en="Bachelor's degree focusing on management structures, business administration, and team leadership." data-ua="Бакалаврський рівень із фокусом на управлінські структури, бізнес-адміністрування та лідерство в команді."></p>
+            </div>
+
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3 data-en="Junior Specialist: Branch Machine Building" data-ua="Молодший спеціаліст: Галузеве машинобудування">Junior Specialist: Branch Machine Building</h3>
+                    <span class="exp-date">2018 – 2022</span>
+                </div>
+                <div class="exp-company" data-en="KKTENAEU" data-ua="ККТЕНАУ">KKTENAEU</div>
+                <p data-en="Technical foundation, structural analysis, and systematic engineering approach." data-ua="Технічна база, структурний аналіз та системний інженерний підхід."></p>
+            </div>
+        </section>
+
+        <!-- SKILLS & COMPETENCIES -->
         <div class="grid-2">
             <section class="card">
-                <h2 data-en="QA Competencies" data-ua="QA Компетенції">QA Competencies</h2>
+                <h2 data-en="QA & Technical Competencies" data-ua="QA та технічні компетенції">QA & Technical Competencies</h2>
                 <div class="tags">
                     <span>SDLC & STLC</span>
                     <span data-en="Functional Testing" data-ua="Функціональне тестування">Functional Testing</span>
                     <span data-en="Regression Testing" data-ua="Регресійне тестування">Regression Testing</span>
-                    <span data-en="Smoke Testing" data-ua="Дивм-тестування (Smoke)">Smoke Testing</span>
+                    <span data-en="Smoke Testing" data-ua="Смок-тестування">Smoke Testing</span>
                     <span data-en="Exploratory Testing" data-ua="Дослідницьке тестування">Exploratory Testing</span>
                     <span data-en="Bug Reporting" data-ua="Звітування про баги">Bug Reporting</span>
                     <span>Test Cases</span>
+                    <span>Chrome DevTools</span>
+                    <span>Client-Server Basics</span>
                 </div>
             </section>
 
             <section class="card">
-                <h2 data-en="Technical Stack" data-ua="Технічний стек">Technical Stack</h2>
+                <h2 data-en="Design, AI & Vibe Coding" data-ua="Дизайн, AI та Vibe Coding">Design, AI & Vibe Coding</h2>
                 <div class="tags">
                     <span>HTML5 / CSS3</span>
-                    <span data-en="Client-Server Basics" data-ua="Клієнт-серверні основи">Client-Server Basics</span>
-                    <span>Chrome DevTools</span>
-                    <span>AI Assistants (ChatGPT/Claude)</span>
+                    <span>AI Coding Agents (Claude/ChatGPT)</span>
+                    <span>Prompt Engineering</span>
+                    <span>UI/UX Prototyping</span>
+                    <span>After Effects / Motion Design</span>
+                    <span>Photoshop / Premiere Pro</span>
                     <span>Git / GitHub</span>
-                    <span>OBS Studio / NVENC</span>
+                </div>
