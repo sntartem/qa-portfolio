@@ -56,10 +56,18 @@ header {
     width: 90px;
     height: 90px;
     border-radius: 50%;
+    border: 3px solid #38bdf8;
     overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .hero-title h1 {
     font-size: 2.2rem;
     font-weight: 800;
