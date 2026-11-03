@@ -11,15 +11,13 @@
 <body class="lang-en">
 
     <div class="container">
-        <!-- Кнопка перемикача мови ззовні зверху справа -->
-        <div class="top-action-bar">
-            <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">
-                <span class="lang-en-text" style="opacity: 1;">EN</span> / <span class="lang-ua-text" style="opacity: 0.5;">UA</span>
-            </button>
-        </div>
-
         <!-- Header / Hero Section -->
         <header>
+            <!-- Абсолютна кнопка перемикача мови в правому верхньому кутку шапки -->
+            <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">
+                <span class="lang-en-text">EN</span> / <span class="lang-ua-text">UA</span>
+            </button>
+
             <div class="header-profile">
                 <div style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--accent-blue); overflow: hidden; flex-shrink: 0; box-shadow: 0 0 15px var(--accent-glow);">
                     <img src="avatar.jpg" alt="Artem Danylovskyi" style="width: 100%; height: 100%; object-fit: cover; display: block;">
@@ -95,11 +93,3 @@
                     <span>AI Assistants (ChatGPT/Claude)</span>
                     <span>Git / GitHub</span>
                     <span>OBS Studio / NVENC</span>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
