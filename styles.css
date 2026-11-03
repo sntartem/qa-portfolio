@@ -25,7 +25,6 @@ body {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    position: relative;
 }
 
 header {
@@ -42,7 +41,7 @@ header {
     position: relative;
 }
 
-/* Кнопка мови фіксована у правому верхньому кутку шапки */
+/* Кнопка мови жорстко у правому верхньому кутку шапки */
 .lang-btn {
     position: absolute;
     top: 20px;
@@ -101,6 +100,7 @@ body.lang-ua .lang-ua-text {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    padding-right: 60px; /* Запас, щоб пошта не заходила під кнопку */
 }
 
 .header-contacts a {
@@ -188,11 +188,14 @@ li {
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 55px;
+        padding-top: 60px;
     }
     .lang-btn {
         top: 15px;
         right: 15px;
+    }
+    .header-contacts {
+        padding-right: 0;
     }
 }
 
