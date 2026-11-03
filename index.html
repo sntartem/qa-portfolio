@@ -5,161 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artem Danylovskyi — Junior QA Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="lang-en"> <!-- За замовчуванням англійська -->
 
     <div class="container">
         <!-- Header / Hero Section -->
         <header>
             <div class="header-profile">
-                <!-- avatar.jpg файл фотографії -->
-                    <div style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid #38bdf8; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);">
-                        <img src="avatar.jpg" alt="Artem Danylovskyi" style="width: 100%; height: 100%; object-fit: cover; display: block;">
-                    </div>
+                <div style="width: 90px; height: 90px; border-radius: 50%; border: 3px solid var(--accent-blue); overflow: hidden; flex-shrink: 0; box-shadow: 0 0 15px var(--accent-glow);">
+                    <img src="avatar.jpg" alt="Artem Danylovskyi" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
                 <div class="hero-title">
                     <h1>Artem Danylovskyi</h1>
-                    <div class="subtitle">Junior Software QA Engineer</div>
+                    <div class="subtitle" data-en="Junior Software QA Engineer" data-ua="Молодший спеціаліст із забезпечення якості (QA)">Junior Software QA Engineer</div>
                 </div>
             </div>
-            <div class="contact-links">
-                <div>✉ Email: <a href="mailto:artem.dan.m@gmail.com">artem.dan.m@gmail.com</a></div>
-                <div>📱 Phone / Telegram: +380 63 603 09 93</div>
-                <div>✈ Telegram: <a href="https://t.me/nuquma" target="_blank">@nuquma</a></div>
-                <div>🌐 GitHub: <a href="https://sntartem.github.io/nuquma/" target="_blank">sntartem.github.io/nuquma</a></div>
+
+            <div class="header-contacts">
+                <div class="contact-row">
+                    <span>📧 Email: <a href="mailto:artem.dan.m@gmail.com">artem.dan.m@gmail.com</a></span>
+                    <!-- Кнопка перемикача мови та теми -->
+                    <button id="lang-toggle-btn" class="lang-btn" onclick="toggleLanguage()">UA / EN</button>
+                </div>
+                <div>📱 Phone / Telegram: <a href="tel:+380636030993">+380 63 603 09 93</a></div>
+                <div>✈️ Telegram: <a href="https://t.me/nuquma" target="_blank">@nuquma</a></div>
+                <div>🌐 GitHub: <a href="https://github.com/sntartem" target="_blank">sntartem.github.io</a></div>
             </div>
         </header>
 
-        <div class="grid">
-            <!-- Sidebar / Left Column -->
-            <aside>
-                <div class="card">
-                    <div class="section-title">QA Competencies</div>
-                    <div class="tags-group">
-                        <span class="tag">SDLC &amp; STLC</span>
-                        <span class="tag">Functional Testing</span>
-                        <span class="tag">Regression Testing</span>
-                        <span class="tag">Smoke Testing</span>
-                        <span class="tag">Exploratory Testing</span>
-                        <span class="tag">Bug Reporting</span>
-                        <span class="tag">Test Cases</span>
-                    </div>
+        <!-- PROFESSIONAL SUMMARY -->
+        <section class="card">
+            <h2 data-en="Professional Summary" data-ua="Професійний профіль">Professional Summary</h2>
+            <p data-en="Detail-oriented Junior QA Engineer with a solid understanding of software testing concepts, SDLC, and web application architecture. Equipped with strong analytical skills, hands-on experience inspecting web layouts (HTML/CSS), and leveraging AI tools to write clear test documentation. Passionate about quality assurance, finding edge-case bugs, and delivering reliable cloud platform solutions."
+               data-ua="Уважний до деталей Junior QA Engineer із міцним розумінням концепцій тестування ПО, життєвого циклу розробки (SDLC) та архітектури вебдодатків. Має сильні аналітичні навички, практичний досвід перевірки вебверстки (HTML/CSS) та використання AI-інструментів для створення чіткої тестової документації. Захоплений забезпеченням якості, пошуком незвичних багів та створенням надійних рішень.">
+               Detail-oriented Junior QA Engineer with a solid understanding of software testing concepts, SDLC, and web application architecture. Equipped with strong analytical skills, hands-on experience inspecting web layouts (HTML/CSS), and leveraging AI tools to write clear test documentation. Passionate about quality assurance, finding edge-case bugs, and delivering reliable cloud platform solutions.
+            </p>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="card">
+            <h2 data-en="Experience & Technical Background" data-ua="Досвід та технічний бекграунд">Experience & Technical Background</h2>
+            
+            <div class="experience-item">
+                <div class="exp-header">
+                    <h3 data-en="Game & Web QA Tester / Server Administrator" data-ua="Game & Web QA Tester / Адміністратор сервера">Game & Web QA Tester / Server Administrator</h3>
+                    <span class="exp-date">2021 – Present</span>
                 </div>
+                <div class="exp-company" data-en="GTA V RolePlay Projects (Quant RP & 3 other servers)" data-ua="GTA V RolePlay Проєкти (Quant RP та 3 інші сервери)">GTA V RolePlay Projects (Quant RP & 3 other servers)</div>
+                <ul>
+                    <li data-en="Performed functional, exploratory, smoke, and regression testing on game mechanics, web interfaces, and server updates across 4 GTA V RP projects."
+                        data-ua="Виконував функціональне, дослідницьке (exploratory), смок- та регресійне тестування ігрових механік, веб-інтерфейсів та оновлень на 4 проєктах GTA V RP.">
+                        Performed functional, exploratory, smoke, and regression testing on game mechanics, web interfaces, and server updates across 4 GTA V RP projects.</li>
+                    <li data-en="Logged detailed bug reports (reproduction steps, expected vs. actual behavior, screenshots/videos) and tracked resolution alongside development teams."
+                        data-ua="Створював детальні репорти про баги (кроки відтворення, очікувана та реальна поведінка, скріншоти/відео) та супроводжував їх вирішення разом із розробниками.">
+                        Logged detailed bug reports (reproduction steps, expected vs. actual behavior, screenshots/videos) and tracked resolution alongside development teams.</li>
+                    <li data-en="Tested complex client-server interactions, edge-case user scenarios, and economy/system stability before major update rollouts."
+                        data-ua="Тестував складні клієнт-серверні взаємодії, нестандартні сценарії користувачів та стабільність економіки/систем перед випуском великих оновлень.">
+                        Tested complex client-server interactions, edge-case user scenarios, and economy/system stability before major update rollouts.</li>
+                </ul>
+            </div>
+        </section>
 
-                <div class="card">
-                    <div class="section-title">Technical Stack</div>
-                    <div class="tags-group">
-                        <span class="tag alt">HTML5 / CSS3</span>
-                        <span class="tag alt">Client-Server Basics</span>
-                        <span class="tag alt">Chrome DevTools</span>
-                        <span class="tag alt">AI Assistants (ChatGPT/Claude)</span>
-                        <span class="tag alt">Git / GitHub</span>
-                        <span class="tag alt">Adobe AE / Photoshop</span>
-                    </div>
+        <!-- SKILLS -->
+        <div class="grid-2">
+            <section class="card">
+                <h2 data-en="QA Competencies" data-ua="QA Компетенції">QA Competencies</h2>
+                <div class="tags">
+                    <span>SDLC & STLC</span>
+                    <span data-en="Functional Testing" data-ua="Функціональне тестування">Functional Testing</span>
+                    <span data-en="Regression Testing" data-ua="Регресійне тестування">Regression Testing</span>
+                    <span data-en="Smoke Testing" data-ua="Дивм-тестування (Smoke)">Smoke Testing</span>
+                    <span data-en="Exploratory Testing" data-ua="Дослідницьке тестування">Exploratory Testing</span>
+                    <span data-en="Bug Reporting" data-ua="Звітування про баги">Bug Reporting</span>
+                    <span>Test Cases</span>
                 </div>
+            </section>
 
-                <div class="card">
-                    <div class="section-title">Soft Skills</div>
-                    <ul>
-                        <li>High attention to detail &amp; accuracy</li>
-                        <li>Strong problem-solving mindset</li>
-                        <li>Calm &amp; systematic approach</li>
-                        <li>Fast learner &amp; tech enthusiast</li>
-                        <li>Great team communication</li>
-                    </ul>
+            <section class="card">
+                <h2 data-en="Technical Stack" data-ua="Технічний стек">Technical Stack</h2>
+                <div class="tags">
+                    <span>HTML5 / CSS3</span>
+                    <span data-en="Client-Server Basics" data-ua="Клієнт-серверні основи">Client-Server Basics</span>
+                    <span>Chrome DevTools</span>
+                    <span>AI Assistants (ChatGPT/Claude)</span>
+                    <span>Git / GitHub</span>
+                    <span>OBS Studio / NVENC</span>
                 </div>
-
-                <div class="card">
-                    <div class="section-title">Languages</div>
-                    <p style="margin: 0; color: var(--text-main);">
-                        <strong>English:</strong> Intermediate (B1)<br>
-                        <strong>Ukrainian:</strong> Native
-                    </p>
-                </div>
-            </aside>
-
-            <!-- Main Content / Right Column -->
-            <main>
-                <!-- Summary -->
-                <div class="card">
-                    <div class="section-title">Professional Summary</div>
-                    <p>
-                        Detail-oriented Junior QA Engineer with a solid understanding of software testing concepts, SDLC, and web application architecture. Equipped with strong analytical skills, hands-on experience inspecting web layouts (HTML/CSS), and leveraging AI tools to write clear test documentation. Passionate about quality assurance, finding edge-case bugs, and delivering reliable cloud platform solutions.
-                    </p>
-                </div>
-
-                <!-- Experience -->
-                <div class="card">
-                    <div class="section-title">Experience &amp; Technical Background</div>
-
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div>
-                                <div class="exp-role">Game &amp; Web QA Tester / Server Administrator</div>
-                                <div class="exp-company">GTA V RolePlay Projects (Quant RP &amp; 3 other servers)</div>
-                            </div>
-                            <div class="exp-date">2021 — Present</div>
-                        </div>
-                        <ul>
-                            <li>Performed functional, exploratory, smoke, and regression testing on game mechanics, web interfaces, and server updates across 4 GTA V RP projects.</li>
-                            <li>Logged detailed bug reports (reproduction steps, expected vs. actual behavior, screenshots/videos) and tracked resolution alongside development teams.</li>
-                            <li>Tested complex client-server interactions, edge-case user scenarios, and economy/system stability before major update rollouts.</li>
-                            <li>Administered server environments, verified database/player data state, and analyzed user-reported issues for quick defect detection.</li>
-                        </ul>
-                    </div>
-
-                    <div class="exp-item" style="margin-top: 20px;">
-                        <div class="exp-header">
-                            <div>
-                                <div class="exp-role">PR Content &amp; Media Specialist</div>
-                                <div class="exp-company">Quant RP</div>
-                            </div>
-                            <div class="exp-date">2022 — 2024</div>
-                        </div>
-                        <ul>
-                            <li>Validated visual UI layouts and promotional web pages using Chrome DevTools, ensuring high visual and functional standards.</li>
-                            <li>Collaborated with cross-functional team members to maintain high product quality and brand engagement.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Testing Methodology & AI -->
-                <div class="card">
-                    <div class="section-title">Testing Practices &amp; AI Integration</div>
-                    <div class="highlight-box">
-                        <h4>Test Documentation &amp; AI Workflows</h4>
-                        <p style="margin: 0; font-size: 0.9rem;">
-                            Experienced in applying functional, regression, smoke, and exploratory testing methodologies. Skilled in utilizing modern AI assistants (ChatGPT, Claude) to accelerate test scenario generation, optimize test data sets, and refine bug description clarity.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="card">
-                    <div class="section-title">Education &amp; Certification</div>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <div>
-                                <div class="exp-role">2D Motion Design: Adobe After Effects Advanced Training Course</div>
-                                <div class="exp-company">FreelStep School</div>
-                            </div>
-                            <div class="exp-date">June 2025</div>
-                        </div>
-                        <p>Completed intensive technical training covering frame accuracy, timeline logic, and complex animation render pipelines.</p>
-                        <p style="font-size: 0.85rem; color: var(--accent-blue); font-family: 'JetBrains Mono', monospace; margin: 0;">
-                            Certificate Serial No: cert_x8qj1tq5
-                        </p>
-                    </div>
-                </div>
-            </main>
+            </section>
         </div>
-
-        <footer>
-            © Artem Danylovskyi — Junior QA Engineer Resume Website
-        </footer>
     </div>
 
+    <!-- Підключаємо скрипт перемикання -->
+    <script src="script.js"></script>
 </body>
 </html>
