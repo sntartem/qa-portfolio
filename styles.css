@@ -27,39 +27,6 @@ body {
     margin: 0 auto;
 }
 
-/* Панель для кнопки в правому верхньому кутку */
-.top-action-bar {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 12px;
-}
-
-/* Стиль кнопки мови */
-.lang-btn {
-    background: var(--card-bg);
-    border: 1px solid var(--accent-blue);
-    color: var(--text-main);
-    padding: 6px 14px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 0.85rem;
-    box-shadow: 0 0 10px var(--accent-glow);
-    transition: all 0.2s ease;
-}
-
-.lang-btn:hover {
-    background: var(--accent-glow);
-}
-
-/* Динамічна підсвітка активної мови в кнопці */
-body.lang-en .lang-en-text,
-body.lang-ua .lang-ua-text {
-    opacity: 1 !important;
-    color: var(--accent-blue);
-    text-shadow: 0 0 8px var(--accent-glow);
-}
-
 header {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -71,6 +38,42 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    position: relative; /* Робимо шапку базою для абсолютної кнопки */
+}
+
+/* Кнопка мови фіксована у правому верхньому кутку шапки */
+.lang-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-color);
+    border: 1px solid var(--accent-blue);
+    color: var(--text-main);
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 0 10px var(--accent-glow);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.lang-btn:hover {
+    background: var(--accent-glow);
+}
+
+/* Підсвітка обраної мови */
+.lang-en-text, .lang-ua-text {
+    opacity: 0.4;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+body.lang-en .lang-en-text,
+body.lang-ua .lang-ua-text {
+    opacity: 1 !important;
+    color: var(--accent-blue);
+    text-shadow: 0 0 8px var(--accent-glow);
 }
 
 .header-profile {
@@ -185,6 +188,11 @@ li {
     header {
         flex-direction: column;
         align-items: flex-start;
+        padding-top: 50px; /* Додаємо місце зверху на мобільних, щоб кнопка не наїжджала на текст */
+    }
+    .lang-btn {
+        top: 15px;
+        right: 15px;
     }
 }
 
