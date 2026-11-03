@@ -25,6 +25,7 @@ body {
 .container {
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -38,7 +39,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    position: relative; /* Робимо шапку базою для абсолютної кнопки */
+    position: relative;
 }
 
 /* Кнопка мови фіксована у правому верхньому кутку шапки */
@@ -63,7 +64,6 @@ header {
     background: var(--accent-glow);
 }
 
-/* Підсвітка обраної мови */
 .lang-en-text, .lang-ua-text {
     opacity: 0.4;
     transition: opacity 0.2s ease, color 0.2s ease;
@@ -188,7 +188,7 @@ li {
     header {
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 50px; /* Додаємо місце зверху на мобільних, щоб кнопка не наїжджала на текст */
+        padding-top: 55px;
     }
     .lang-btn {
         top: 15px;
